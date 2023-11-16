@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "svg2comp": "node ./script/svg2comp/bin.mjs",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "prettier": "prettier ./src --write"
   },
   "config": {
     "commitizen": {
@@ -33,6 +34,7 @@
     "eslint-config-next": "14.0.2",
     "inquirer": "^9.2.12",
     "postcss": "^8",
+    "prettier": "3.1.0",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }

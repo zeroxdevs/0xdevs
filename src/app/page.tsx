@@ -1,4 +1,4 @@
-import Div from "@src/components/Div";
+import Div from '@src/components/Div';
 
 export default function Home() {
   return <Div></Div>;

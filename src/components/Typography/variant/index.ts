@@ -1,3 +1,3 @@
-import { typographyVarients } from "./variant";
+import { typographyVarients } from './variant';
 
 export default typographyVarients;

@@ -1,5 +1,5 @@
-import React from "react";
-import { DivProps } from "./@types";
+import React from 'react';
+import { DivProps } from './@types';
 
 function Div(props: DivProps) {
   const { children, ...rest } = props;
