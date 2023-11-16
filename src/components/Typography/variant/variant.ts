@@ -1,22 +1,22 @@
-import { TypographyVariant } from "../@types";
+import { TypographyVariant } from '../@types';
 
 export const typographyVarients: TypographyVariant = {
   Heading1: {
-    Component: "h1",
+    Component: 'h1',
   },
   Heading2: {
-    Component: "h2",
+    Component: 'h2',
   },
   Heading3: {
-    Component: "h3",
+    Component: 'h3',
   },
   TextSm: {
-    Component: "p",
+    Component: 'p',
   },
   Text: {
-    Component: "p",
+    Component: 'p',
   },
   TextLg: {
-    Component: "p",
+    Component: 'p',
   },
 };
