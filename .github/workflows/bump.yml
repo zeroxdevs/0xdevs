@@ -3,11 +3,11 @@ name: "Bump Version"
 on:
   push:
     branches:
-      - "main"
+      - "develop"
 
 jobs:
   bump-version:
-    name: "Bump Version on main"
+    name: "Bump Version on develop"
     runs-on: ubuntu-latest
     permissions:
       contents: write
