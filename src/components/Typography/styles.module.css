@@ -1,0 +1,23 @@
+.Heading1 {
+  @apply text-[42px] font-medium;
+}
+
+.Heading2 {
+  @apply text-[32px] font-normal;
+}
+
+.Heading3 {
+  @apply text-[32px] font-normal;
+}
+
+.TextSm {
+  @apply text-[16px];
+}
+
+.Text {
+  @apply text-[18px];
+}
+
+.TextLg {
+  @apply text-[22px];
+}
