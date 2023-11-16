@@ -1,3 +1,3 @@
-import { colorPalette } from "./colors.config";
+import { colorPalette } from './colors.config';
 
 export default colorPalette;
