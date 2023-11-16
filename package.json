@@ -7,7 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "svg2comp": "node ./script/svg2comp/bin.mjs"
+    "svg2comp": "node ./script/svg2comp/bin.mjs",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "classnames": "^2.3.2",
@@ -21,6 +27,8 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.2",
     "inquirer": "^9.2.12",
