@@ -7,9 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "echo 'We do not have any active test !!!'",
     "svg2comp": "node ./script/svg2comp/bin.mjs",
     "commit": "git-cz",
-    "prettier": "prettier ./src --write"
+    "prettier": "prettier ./src --write",
+    "prepare": "husky install"
   },
   "config": {
     "commitizen": {
@@ -32,6 +34,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.2",
+    "husky": "^8.0.3",
     "inquirer": "^9.2.12",
     "postcss": "^8",
     "prettier": "3.1.0",
