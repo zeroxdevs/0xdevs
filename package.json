@@ -7,10 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint-staged": "lint-staged -v",
     "test": "echo 'We do not have any active test !!!'",
     "svg2comp": "node ./script/svg2comp/bin.mjs",
     "commit": "git-cz",
-    "prettier": "prettier ./src --write",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"

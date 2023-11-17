@@ -1,32 +1,32 @@
-name: "Bump Version"
+name: 'Bump Version'
 
 on:
   push:
     branches:
-      - "develop"
+      - 'develop'
 
 jobs:
   bump-version:
-    name: "Bump Version on develop"
+    name: 'Bump Version on develop'
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - name: "Checkout source code"
-        uses: "actions/checkout@v4"
+      - name: 'Checkout source code'
+        uses: 'actions/checkout@v4'
         with:
           ref: ${{ github.ref }}
-      - name: "cat package.json"
+      - name: 'cat package.json'
         run: cat ./package.json
-      - name: "Setup Node.js"
-        uses: "actions/setup-node@v4"
+      - name: 'Setup Node.js'
+        uses: 'actions/setup-node@v4'
         with:
           node-version: 18
-      - name: "Automated Version Bump"
-        uses: "phips28/gh-action-bump-version@master"
+      - name: 'Automated Version Bump'
+        uses: 'phips28/gh-action-bump-version@master'
         with:
-          tag-prefix: ""
+          tag-prefix: ''
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: "cat package.json"
+      - name: 'cat package.json'
         run: cat ./package.json
