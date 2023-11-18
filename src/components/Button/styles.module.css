@@ -1,0 +1,6 @@
+.btn {
+  @apply bg-primary  
+  px-[27px] py-[12px] rounded-[5px]
+  border-solid border-[1px] border-[#424242]
+  hover:bg-accent hover:border-accent;
+}
