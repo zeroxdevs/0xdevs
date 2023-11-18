@@ -1,5 +1,6 @@
 import Button from '@src/components/Button';
 import Div from '@src/components/Div';
+import Divider from '@src/components/Divider';
 import Input from '@src/components/Input/Input';
 import Typography from '@src/components/Typography';
 
@@ -89,6 +90,7 @@ export default function Home() {
           </Div>
         </Div>
       </Div>
+      <Divider variant="primary" />
     </Div>
   );
 }

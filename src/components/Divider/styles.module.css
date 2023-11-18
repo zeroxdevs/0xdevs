@@ -1,0 +1,13 @@
+.primary {
+  @apply w-full h-[4px];
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 111, 49, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.secondary {
+  @apply w-full h-[2px] bg-white;
+}
