@@ -1,10 +1,12 @@
+import Button from '@src/components/Button';
 import Div from '@src/components/Div';
+import Input from '@src/components/Input/Input';
 import Typography from '@src/components/Typography';
 
 export default function Home() {
   return (
     <Div>
-      <Div className="bg-secondary flex flex-col">
+      <Div className="bg-secondary flex flex-col pb-[54px]">
         <Typography
           variant="TextLg"
           className="text-accent pt-[33px] text-center"
@@ -71,7 +73,19 @@ export default function Home() {
                 </Div>
               </Div>
             </Div>
-            <Div>{/* Email Input here ... */}</Div>
+            <Div className="flex justify-center pt-[20px]">
+              <Div className="w-fit border-solid border-[1px] border-accent rounded-[5px] flex justify-center items-center p-[4px]">
+                <Div className="px-[12px]">
+                  <Input
+                    className="w-[200px]"
+                    placeholder="Your Email Address"
+                  ></Input>
+                </Div>
+                <Div>
+                  <Button>Alert me</Button>
+                </Div>
+              </Div>
+            </Div>
           </Div>
         </Div>
       </Div>
