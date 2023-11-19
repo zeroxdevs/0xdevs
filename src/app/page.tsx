@@ -3,6 +3,7 @@ import Div from '@src/components/Div';
 import Divider from '@src/components/Divider';
 import Input from '@src/components/Input/Input';
 import Typography from '@src/components/Typography';
+import Team from '@src/app/_feature/Team/Team';
 
 export default function Home() {
   return (
@@ -91,13 +92,7 @@ export default function Home() {
         </Div>
       </Div>
       <Divider variant="primary" />
-      <Div className="pt-[19px]">
-        <Div className="flex flex-col justify-center items-center">
-          <Typography variant="Heading3">Meet Our Team</Typography>
-          <Div className="w-[470px] h-[3px] bg-accent"></Div>
-          <Div className="w-[200px] mt-[17px] h-[3px] bg-[#363636]"></Div>
-        </Div>
-      </Div>
+      <Team />
     </Div>
   );
 }
