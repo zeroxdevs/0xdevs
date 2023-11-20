@@ -23,7 +23,7 @@ const Header = () => {
           :)
         </Typography>
       </Div>
-      <Div className="flex justify-center pt-[16px]">
+      <Div className="flex justify-center  pt-[16px]">
         <Div className="border-solid border-[1px] border-accent rounded-[15px] w-fit px-[15px] py-[24px]">
           <Typography variant="Heading3" className="text-center pb-[27px]">
             Countdown to Commence
