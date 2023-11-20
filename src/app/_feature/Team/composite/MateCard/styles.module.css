@@ -1,0 +1,11 @@
+.mate-card {
+  @apply w-[280px] h-[320px] pt-[18px] rounded-[16px] bg-secondary border-solid border-[1px] border-accent flex flex-col items-center;
+}
+
+.mate-image-container {
+  @apply flex justify-center items-center;
+}
+
+.mate-image {
+  @apply rounded-full grayscale;
+}

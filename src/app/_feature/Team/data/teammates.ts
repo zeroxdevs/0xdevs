@@ -3,23 +3,23 @@ import { TeamMate } from '../@types';
 const teammates: TeamMate = [
   {
     name: 'Mohammad',
-    expertise: 'TS Full-stack',
-    imgSrc: '/assets/img/sina.jpeg',
+    expertise: 'TS Full-Stack',
+    imgSrc: 'mohammad.jpg',
   },
   {
     name: 'Yashar',
     expertise: 'UI/UX Designer',
-    imgSrc: '/assets/img/sina.jpeg',
+    imgSrc: 'yashar.jpg',
   },
   {
     name: 'Sina',
     expertise: 'UI/UX Designer',
-    imgSrc: '/assets/img/sina.jpeg',
+    imgSrc: 'sina.jpeg',
   },
   {
     name: 'Ali',
     expertise: 'Front-End Developer',
-    imgSrc: '/assets/img/sina.jpeg',
+    imgSrc: 'ali.jpeg',
   },
 ];
 
