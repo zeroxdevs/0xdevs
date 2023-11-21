@@ -1,0 +1,14 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Denote all files that are truly binary and should not be modified.
+*.png binary
+*.jpg binary
+*.jpeg binary
+
+# JavaScript and TypeScript files
+*.js text eol=lf
+*.mjs text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
