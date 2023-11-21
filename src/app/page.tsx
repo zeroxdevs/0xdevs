@@ -4,6 +4,8 @@ import Team from '@src/app/_feature/Team/Team';
 import Header from './_feature/Header';
 import Typography from '@src/components/Typography';
 
+export const runtime = 'edge';
+
 export default function Home() {
   return (
     <Div>
