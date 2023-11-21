@@ -3,6 +3,7 @@ import Divider from '@src/components/Divider';
 import Team from '@src/app/_feature/Team/Team';
 import Header from './_feature/Header';
 import Typography from '@src/components/Typography';
+import SvgCurveLine from '@src/components/Svg/assets/CurveLine';
 
 export const runtime = 'edge';
 
@@ -32,6 +33,9 @@ export default function Home() {
           energy and innovative solutions. With Typescript language ecosystem,
           we're the go-to team for dynamic and impactful software development.
         </Typography>
+      </Div>
+      <Div className="h-[15vw] relative">
+        <SvgCurveLine className="absolute bottom-[-50%]" />
       </Div>
     </Div>
   );
