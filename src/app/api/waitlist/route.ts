@@ -21,7 +21,7 @@ export const POST = asyncHandler(async (request: Request) => {
   //   throw new Error('email already exist !');
   // }
   await db
-    .prepare('NSERT INTO wait_list (email) VALUES (?)')
+    .prepare('INSERT INTO wait_list (email) VALUES (?)')
     .bind(data.email)
     .run();
   return Response.json({ status: 'done' });
