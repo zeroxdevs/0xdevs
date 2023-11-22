@@ -1,10 +1,13 @@
 {
+  "plugins": ["next-on-pages"],
   "extends": [
     "next/core-web-vitals",
     "plugin:storybook/recommended",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "plugin:next-on-pages/recommended"
   ],
   "rules": {
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "next-on-pages/no-unsupported-configs": "warn"
   }
 }
