@@ -10,16 +10,16 @@ export const POST = asyncHandler(async (request: Request) => {
     throw new Error('email not valid');
   }
   const { D1: db } = process.env;
-  const {
-    results: [{ email }],
-  } = await db
-    .prepare('SELECT * FROM wait_list WHERE email = ?')
-    .bind(data.email)
-    .run();
-  console.log(email);
-  if (email) {
-    throw new Error('email already exist !');
-  }
+  // const {
+  //   results: [{ email }],
+  // } = await db
+  //   .prepare('SELECT * FROM wait_list WHERE email = ?')
+  //   .bind(data.email)
+  //   .run();
+  // console.log(email);
+  // if (email) {
+  //   throw new Error('email already exist !');
+  // }
   await db
     .prepare('NSERT INTO wait_list (email) VALUES (?)')
     .bind(data.email)
