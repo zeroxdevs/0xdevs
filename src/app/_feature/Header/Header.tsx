@@ -1,6 +1,7 @@
 import Div from '@src/components/Div';
 import Typography from '@src/components/Typography';
 import EmailForm from './composite/EmailForm';
+import CountDown from './composite/CountDown';
 
 const Header = () => {
   return (
@@ -28,51 +29,12 @@ const Header = () => {
             Countdown to Commence
           </Typography>
           <Div>
-            <Div className="flex">
-              <Div className="px-[10px]">
-                <Div className="w-[130px] h-[130px] rounded-[15px] border-solid border-[1px] border-accent  bg-primary flex justify-center items-center">
-                  <Typography style={{ fontSize: '54px' }}>20</Typography>
-                </Div>
-                <Div className="pt-[32px]">
-                  <Typography variant="TextSm" className="text-center">
-                    DAYS
-                  </Typography>
-                </Div>
-              </Div>
-              <Div className="px-[10px]">
-                <Div className="w-[130px] h-[130px] rounded-[15px] border-solid border-[1px] border-accent  bg-primary flex justify-center items-center">
-                  <Typography style={{ fontSize: '54px' }}>20</Typography>
-                </Div>
-                <Div className="pt-[32px]">
-                  <Typography variant="TextSm" className="text-center">
-                    HOURS
-                  </Typography>
-                </Div>
-              </Div>
-              <Div className="px-[10px]">
-                <Div className="w-[130px] h-[130px] rounded-[15px] border-solid border-[1px] border-accent  bg-primary flex justify-center items-center">
-                  <Typography style={{ fontSize: '54px' }}>20</Typography>
-                </Div>
-                <Div className="pt-[32px]">
-                  <Typography variant="TextSm" className="text-center">
-                    MUNUTES
-                  </Typography>
-                </Div>
-              </Div>
-              <Div className="px-[10px]">
-                <Div className="w-[130px] h-[130px] rounded-[15px] border-solid border-[1px] border-accent  bg-primary flex justify-center items-center">
-                  <Typography style={{ fontSize: '54px' }}>20</Typography>
-                </Div>
-                <Div className="pt-[32px]">
-                  <Typography variant="TextSm" className="text-center">
-                    SECONDS
-                  </Typography>
-                </Div>
-              </Div>
-            </Div>
-            <EmailForm />
+            <CountDown />
           </Div>
         </Div>
+      </Div>
+      <Div>
+        <EmailForm />
       </Div>
     </Div>
   );
