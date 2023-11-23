@@ -1,28 +1,27 @@
-import { asyncHandler } from '@src/utils/helper';
+import { asyncHandler } from '@src/app/api/_utils/asyncHandler';
 import { waitlistPostSchema } from './_schema';
+import { NextRequest, NextResponse } from 'next/server';
+import responseHandler from '../_utils/responseHandler';
+import captchaVerifier from '../_utils/captchaVerifier';
 
 export const runtime = 'edge';
 
-export const POST = asyncHandler(async (request: Request) => {
+export const POST = asyncHandler(async (request: NextRequest) => {
   const data: any = await request.json();
   const validation = waitlistPostSchema.safeParse(data);
   if (!validation.success) {
     throw new Error('email not valid');
   }
+  const captchaVerify = await captchaVerifier(data.token);
+  if (!captchaVerify) {
+    throw new Error('recapcha faild');
+  }
   const { D1: db } = process.env;
-  // const {
-  //   results: [{ email }],
-  // } = await db
-  //   .prepare('SELECT * FROM wait_list WHERE email = ?')
-  //   .bind(data.email)
-  //   .run();
-  // console.log(email);
-  // if (email) {
-  //   throw new Error('email already exist !');
-  // }
   await db
     .prepare('INSERT INTO wait_list (email) VALUES (?)')
     .bind(data.email)
     .run();
-  return Response.json({ status: 'done' });
+  return responseHandler({
+    message: 'Your email has been successfully added to the waiting list',
+  });
 });

@@ -1,7 +1,6 @@
-import Button from '@src/components/Button';
 import Div from '@src/components/Div';
-import Input from '@src/components/Input/Input';
 import Typography from '@src/components/Typography';
+import EmailForm from './composite/EmailForm';
 
 const Header = () => {
   return (
@@ -71,19 +70,7 @@ const Header = () => {
                 </Div>
               </Div>
             </Div>
-          </Div>
-          <Div className="flex justify-center pt-[20px]">
-            <Div className="w-fit border-solid border-[1px] border-accent rounded-[5px] flex justify-center items-center p-[4px]">
-              <Div className="px-[12px]">
-                <Input
-                  className="w-[200px]"
-                  placeholder="Your Email Address"
-                ></Input>
-              </Div>
-              <Div>
-                <Button>Alert me</Button>
-              </Div>
-            </Div>
+            <EmailForm />
           </Div>
         </Div>
       </Div>

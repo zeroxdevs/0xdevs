@@ -1,5 +1,5 @@
 export interface InputProps
   extends React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLInputElement>,
+    React.InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
   > {}
