@@ -3,7 +3,6 @@
 import Button from '@src/components/Button';
 import Div from '@src/components/Div';
 import Input from '@src/components/Input/Input';
-import axios from 'axios';
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
@@ -37,17 +36,32 @@ function EmailForm() {
     }
     if (executeRecaptcha) {
       const token = await executeRecaptcha();
-      axios
-        .post(`http://localhost:3000/api/waitlist`, {
+      fetch('/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
           token,
           email: state.email,
+        }),
+      })
+        .then((response) => {
+          if (response.ok) {
+            // Success logic
+          } else {
+            // Failure logic
+          }
         })
-        .then(() => {
-          // Success logic
-        })
-        .catch(() => {
-          // Failure logic
+        .catch((error) => {
+          // Network error or other issues
         });
+    }
+  };
+
+  const handelEnterPress = (e: any) => {
+    if (e.key === 'Enter') {
+      submitHandler();
     }
   };
 
@@ -75,6 +89,7 @@ function EmailForm() {
       <Div className="w-fit border-solid border-[1px] border-accent rounded-[5px] flex justify-center items-center p-[4px]">
         <Div className="px-[12px]">
           <Input
+            onKeyDown={handelEnterPress}
             onChange={changeHandler}
             className="w-[200px]"
             placeholder="Your Email Address"
