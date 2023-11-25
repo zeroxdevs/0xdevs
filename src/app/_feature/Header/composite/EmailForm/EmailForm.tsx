@@ -31,31 +31,32 @@ function EmailForm() {
     const validation = waitListSchema.safeParse({
       email: state.email,
     });
-    if (!validation.success) {
-      setState({ ...state, error: true });
-    }
-    if (executeRecaptcha) {
-      const token = await executeRecaptcha();
-      fetch('/api/waitlist', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          token,
-          email: state.email,
-        }),
-      })
-        .then((response) => {
-          if (response.ok) {
-            // Success logic
-          } else {
-            // Failure logic
-          }
+    if (validation.success) {
+      if (executeRecaptcha) {
+        const token = await executeRecaptcha();
+        fetch('/api/waitlist', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            token,
+            email: state.email,
+          }),
         })
-        .catch((error) => {
-          // Network error or other issues
-        });
+          .then((response) => {
+            if (response.ok) {
+              // Success logic
+            } else {
+              // Failure logic
+            }
+          })
+          .catch((error) => {
+            // Network error or other issues
+          });
+      }
+    } else {
+      setState({ ...state, error: true });
     }
   };
 
