@@ -3,6 +3,7 @@
 import Button from '@src/components/Button';
 import Div from '@src/components/Div';
 import Input from '@src/components/Input/Input';
+import { useModalContext } from '@src/context/Modal/hooks/Modal.hook';
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
@@ -23,6 +24,7 @@ function EmailForm() {
     error: false,
   });
   const { executeRecaptcha } = useGoogleReCaptcha();
+  const { openModal } = useModalContext();
 
   const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setState({ ...state, email: e.target.value });
@@ -45,11 +47,8 @@ function EmailForm() {
           }),
         })
           .then((response) => {
-            if (response.ok) {
-              // Success logic
-            } else {
-              // Failure logic
-            }
+            openModal({ message: 'Successfully Booked !', buttonText: 'Ok' });
+            setState({ ...state, email: '' });
           })
           .catch((error) => {
             // Network error or other issues
