@@ -3,7 +3,7 @@ import SvgCurveLine from '@src/components/Svg/assets/CurveLine';
 
 function BowDivider() {
   return (
-    <Div className="h-[15vw] relative">
+    <Div className="h-[15vw] md:mt-[40px] relative">
       <SvgCurveLine className="absolute bottom-[-50%]" />
     </Div>
   );

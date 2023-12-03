@@ -16,11 +16,14 @@ export const POST = asyncHandler(async (request: NextRequest) => {
   if (!captchaVerify) {
     throw new Error('recapcha faild');
   }
-  const { D1: db } = process.env;
-  await db
-    .prepare('INSERT INTO wait_list (email) VALUES (?)')
-    .bind(data.email)
-    .run();
+  if (!(process.env.NODE_ENV === 'development')) {
+    const { D1: db } = process.env;
+    await db
+      .prepare('INSERT INTO wait_list (email) VALUES (?)')
+      .bind(data.email)
+      .run();
+  }
+
   return responseHandler({
     message: 'Your email has been successfully added to the waiting list',
   });

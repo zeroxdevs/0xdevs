@@ -12,20 +12,26 @@ const Header = () => {
       >
         0xDevs
       </Typography>
-      <Div className="flex justify-center items-center pt-[32px]">
-        <Typography variant="Heading1" className="text-center pr-[13px]">
+      <Div className="flex   justify-center items-center pt-[32px]">
+        <Typography
+          variant="Heading1"
+          className="text-center md:!text-[18px]     pr-[13px]"
+        >
           We will come soon
         </Typography>
         <Typography
           variant="Heading1"
-          className="text-center text-accent rotate-[30deg]"
+          className="text-center md:!text-[18px] text-accent rotate-[30deg]"
         >
           :)
         </Typography>
       </Div>
-      <Div className="flex justify-center  pt-[16px]">
-        <Div className="border-solid border-[1px] border-accent rounded-[15px] w-fit px-[15px] py-[24px]">
-          <Typography variant="Heading3" className="text-center pb-[27px]">
+      <Div className="flex justify-center   pt-[16px]">
+        <Div className="border-solid border-[1px] border-accent rounded-[15px] w-fit md:w-[80%] px-[15px] py-[24px]">
+          <Typography
+            variant="Heading3"
+            className="text-center md:hidden pb-[27px]"
+          >
             Countdown to Commence
           </Typography>
           <Div>

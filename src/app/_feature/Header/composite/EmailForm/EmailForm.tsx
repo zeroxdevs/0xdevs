@@ -86,18 +86,22 @@ function EmailForm() {
         state.error && 'animated-bounce',
       ])}
     >
-      <Div className="w-fit border-solid border-[1px] border-accent rounded-[5px] flex justify-center items-center p-[4px]">
+      <Div className="w-fit md:w-[70%]  border-solid border-[1px] border-accent rounded-[5px] flex justify-center md:justify-between items-center p-[4px] md:!h-12">
         <Div className="px-[12px]">
           <Input
             onKeyDown={handelEnterPress}
             onChange={changeHandler}
-            className="w-[200px]"
+            className="w-[200px] md:w-[100px] md:placeholder:!text-[10px]"
             placeholder="Your Email Address"
             value={state.email}
           />
         </Div>
         <Div>
-          <Button onClick={submitHandler} type="submit">
+          <Button
+            onClick={submitHandler}
+            type="submit"
+            className="md:!h-10 md:text-[8px]"
+          >
             Alert me
           </Button>
         </Div>
